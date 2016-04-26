@@ -28,8 +28,9 @@ class FileSelectorPanel extends JFrame {
     	int result = fileChooser.showOpenDialog(this);
     	if (result == JFileChooser.APPROVE_OPTION) {
     		  File selectedFile = fileChooser.getSelectedFile();
+    		  VideoProcessor videoProcessor = new VideoProcessor(selectedFile);
     		  System.out.println("Selected file: " + selectedFile.getAbsolutePath());
-    		  //TODO invoke method to start stromotion processing
+    		  //TODO ...
     	}	
     }
 }
