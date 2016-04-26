@@ -15,5 +15,5 @@ Initially, we'll consider:
 //TODO
 
 ## Members
-Karlson Tellicio Bezerra
-Yves Bastos
+- Karlson Tellicio Bezerra
+- Yves Bastos
