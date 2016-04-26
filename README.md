@@ -13,3 +13,7 @@ Initially, we'll consider:
 
 ## Future Work
 //TODO
+
+## Members
+Karlson Tellicio Bezerra
+Yves Bastos
