@@ -1,6 +1,7 @@
 import java.awt.*;
 import java.io.File;
-	
+import javafx.stage.FileChooser;
+
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -16,11 +17,8 @@ class FileSelectorPanel extends JFrame {
      * Window to select video file for edition
      * @param fileType filter for type of file to be selected
      */
-    //ehehehehee
-    //hahahahaha
-    //kkkkk
-    //hihihihi
     public FileSelectorPanel(String fileType) {
+    	
     	JFileChooser fileChooser = new JFileChooser();
     	String fileExtension = "." + fileType;
     	
@@ -34,6 +32,6 @@ class FileSelectorPanel extends JFrame {
     		  VideoProcessor videoProcessor = new VideoProcessor(selectedFile);
     		  System.out.println("Selected file: " + selectedFile.getAbsolutePath());
     		  //TODO ...
-    	}	
+    	}
     }
 }
