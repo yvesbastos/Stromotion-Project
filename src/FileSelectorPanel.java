@@ -16,7 +16,7 @@ class FileSelectorPanel extends JFrame {
      * Window to select video file for edition
      * @param fileType filter for type of file to be selected
      */
-    
+    //ehehehehee
     public FileSelectorPanel(String fileType) {
     	JFileChooser fileChooser = new JFileChooser();
     	String fileExtension = "." + fileType;
