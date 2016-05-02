@@ -6,20 +6,12 @@ public class Main {
 
 	//TODO update FileSelectorPanel to FileSelectorPanel2. FileSelectorPanel2 uses the native OS interface for selecting files. 
 	public static void main(String[] args) {
-        openCVExample();
+		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
-		/*FileSelectorPanel mainFrame = new FileSelectorPanel("mp4");
+		FileSelectorPanel mainFrame = new FileSelectorPanel("data/1/clip1.mp4", "mp4");
         mainFrame.pack();
         mainFrame.setVisible(true);
-        */
+        
         
 	}
-	
-	//TODO simple example to check if OpenCV is running on all machines. Delete afterwards.
-	private static void openCVExample() {
-		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
-        Mat mat = Mat.eye(3, 3, CvType.CV_8UC1);
-        System.out.println("mat = " + mat.dump());
-	}
-
 }

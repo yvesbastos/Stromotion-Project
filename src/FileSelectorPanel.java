@@ -14,10 +14,28 @@ class FileSelectorPanel extends JFrame {
     private JPanel panel3;
     
     /**
-     * Window to select video file for edition
+     * Constructor: window to select video file for edition
      * @param fileType filter for type of file to be selected
      */
     public FileSelectorPanel(String fileType) {
+    	selectFile(null, fileType);
+    	
+    }
+    
+    /**
+     * Constructor: file path passed as argument, does not show file selector.
+     * @param filePath
+     * @param fileType
+     */
+    public FileSelectorPanel(String filePath, String fileType) {
+    	selectFile(filePath, fileType);
+    }
+    
+    private int selectFile(String filePath, String fileType) {
+    	if (filePath != null) {
+  		  VideoProcessor videoProcessor = new VideoProcessor(filePath);
+  		  return 1;
+    	}
     	
     	JFileChooser fileChooser = new JFileChooser();
     	String fileExtension = "." + fileType;
@@ -29,9 +47,10 @@ class FileSelectorPanel extends JFrame {
     	int result = fileChooser.showOpenDialog(this);
     	if (result == JFileChooser.APPROVE_OPTION) {
     		  File selectedFile = fileChooser.getSelectedFile();
-    		  VideoProcessor videoProcessor = new VideoProcessor(selectedFile);
+    		  VideoProcessor videoProcessor = new VideoProcessor(selectedFile.getAbsolutePath());
     		  System.out.println("Selected file: " + selectedFile.getAbsolutePath());
     		  //TODO ...
     	}
+    	return 1;
     }
 }
